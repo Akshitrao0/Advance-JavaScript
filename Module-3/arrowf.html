@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Functions</title>
+</head>
+<body>
+    <script>
+//         const speedWarning = (speedLimit, speed) => {
+//     if (speed > speedLimit) {
+//        return `You are going at ${speed} mph!`
+//     }
+// }
+
+//     console.log(speedWarning(60, 40))
+
+    const distanceTraveledMiles = [267, 345, 234, 190, 299]
+
+    const distanceTraveledKm = distanceTraveledMiles.map((distance => Math.round(distance * 1.6)))
+
+    console.log(distanceTraveledKm)
+
+    </script>
+    
+</body>
+</html>
