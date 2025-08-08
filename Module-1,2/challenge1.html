@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Challenge 1</title>
+</head>
+<body>
+  <script>
+    const playerGuess = 6;
+    const correctAnswer = 4;
+
+    let message = playerGuess < correctAnswer
+      ? 'Guess was low'
+      : playerGuess > correctAnswer
+      ? 'Guess was high'
+      : 'Correct Answer';
+
+    console.log(message);
+  </script>
+</body>
+</html>
