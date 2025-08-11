@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects in JS</title>
+</head>
+<body>
+    <script>
+        const books = {
+            "b001": { title: "To Kill a Mockingbird", price: 18.99, isAvailable: true },
+            "b002": { title: "1984", price: 15.99, isAvailable: false },
+            "b003": { title: "The Great Gatsby", price: 12.49, isAvailable: true },
+            "b004": { title: "Moby Dick", price: 22.50, isAvailable: false }
+}
+
+            // console.log(Object.keys(books))
+
+
+            // const bookValues = Object.values(books)
+
+            // bookValues.forEach(val => console.log(val.title))
+
+
+            const bookEntries = Object.entries(books)
+
+            bookEntries.filter(([id,book]) => book.price > 16).forEach(([id,book]) => console.log('ID: b001 Book: To Kill a Mockingbird 18.99'))
+
+    </script>
+    
+</body>
+</html>

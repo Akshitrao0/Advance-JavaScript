@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Has Own Property</title>
+</head>
+<body>
+    <script>
+const user1 = {
+  username: "rpchan",
+  subscriptionLevel: "bronze",
+  accessPremiumFeature: true
+}
+
+const user2 = {
+  username: "bcstevens",
+  subscriptionLevel: "silver",
+  accessPremiumFeature: false
+}
+
+const user3 = Object.create(null)
+user3.username = 'Tom'
+
+// console.log(user3.hasOwnProperty('username'))
+console.log(Object.hasOwn(user3, 'username'))
+
+function canAccessPremiumFeature(userObj, prop) {
+    // return userObj.hasOwnProperty(prop) && userObj[prop]
+    return Object.hasOwn(userObj, prop) && userObj[prop] 
+}
+
+// console.log(canAccessPremiumFeature(user1, 'accessPremiumFeature'))
+// console.log(canAccessPremiumFeature(user2, 'accessPremiumFeature')) 
+
+
+    </script>
+    
+</body>
+</html>

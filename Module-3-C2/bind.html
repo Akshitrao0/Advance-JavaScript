@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binding This</title>
+</head>
+<body>
+    
+    <script>
+    const product = {
+    name: 'Vanilla Lip Gloss',
+    sku: 'w234fg',
+    stock: 276,
+    getProductInfo: function() {
+        // console.log(this)
+        console.log(`Stock level for ${this.name} (SKU: ${this.sku}): ${this.stock}`)
+    }
+}
+// product.getProductInfo()
+
+const productDetails = product.getProductInfo.bind(product)
+
+productDetails()
+
+    </script>
+</body>
+</html>
