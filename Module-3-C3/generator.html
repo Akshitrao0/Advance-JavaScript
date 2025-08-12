@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generators</title>
+</head>
+<body>
+    <script>
+        function* greetGenerator() {
+                    yield 'Hello';
+                    yield 'Hi';
+                    yield 'Hey';
+                    }
+
+const greeter = greetGenerator();
+
+console.log(greeter.next()); // { value: 'Hello', done: false }
+console.log(greeter.next()); // { value: 'Hi', done: false }
+console.log(greeter.next()); // { value: 'Hey', done: false }
+    </script>
+    
+</body>
+</html>

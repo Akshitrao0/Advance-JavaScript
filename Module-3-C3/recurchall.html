@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursion Challenge</title>
+</head>
+<body>
+    <script>
+        let str = 'SCRIMBA'
+
+function reverseStr(str) {
+    if (str.length === 0) {
+        return str
+    } else {
+        return reverseStr(str.slice(1)) + str.slice(0, 1)
+    }
+}
+
+console.log(reverseStr(str))
+
+    </script>
+    
+</body>
+</html>

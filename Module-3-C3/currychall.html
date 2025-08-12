@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currying Challenge</title>
+</head>
+<body>
+    <script>
+        const createLog = level => message => `[${level.toUpperCase()}] ${message}`
+
+        const infoLogger = createLog('info')
+        const warnLogger = createLog('warn')
+        const errorLogger = createLog('error')
+
+        console.log(infoLogger("Application started")) // Output: "[INFO] Application started"
+        console.log(infoLogger("User logged in")) // Output: "[INFO] User logged in"
+
+        // Log messages with "warn" level
+        console.log(warnLogger("Low disk space")) // Output: "[WARN] Low disk space"
+        console.log(warnLogger("High memory usage")) // Output: "[WARN] High memory usage"
+
+        // Log messages with "error" level
+        console.log(errorLogger("Unhandled exception")) // Output: "[ERROR] Unhandled exception"
+        console.log(errorLogger("Failed to save file"))
+
+</script>
+</body>
+</html>

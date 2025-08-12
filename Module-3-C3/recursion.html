@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursion</title>
+</head>
+<body>
+    <script>
+        let runningTotal = 5
+
+function sumToN(n) {
+    if (n <= 0) {
+        return 0 
+    } else {
+        runningTotal += n-1
+        return n + sumToN(n -1)
+    }
+}
+
+console.log(sumToN(5))
+    </script>
+    
+</body>
+</html>
