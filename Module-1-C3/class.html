@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class vs Constructors</title>
+</head>
+<body>
+    <script>
+        
+
+class Character {
+    constructor(name) {
+        this.name = name
+        this.collectedItemsArr = []
+    }
+    addItem(item){
+        this.collectedItemsArr.push(item)
+        console.log(`${this.name} now has: ${this.collectedItemsArr.join(', ')}`)    
+    }
+}
+
+
+const wizard = new Character('Merlin')
+
+wizard.addItem('a wand')
+console.log('They are very similar, Constructors support hoisting whereas as class declaration fail in it')
+</script>
+</body>
+</html>

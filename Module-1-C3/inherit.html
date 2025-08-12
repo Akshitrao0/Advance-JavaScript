@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inheritance Class</title>
+</head>
+<body>
+    <script>
+        class Event {
+    constructor(name, location, date) {
+        this.name = name
+        this.location = location
+        this.date = date
+    }
+
+    getDetails() {
+        return `Event: ${this.name}, Location: ${this.location}, Date: ${this.date}`
+    }
+}
+
+class TennisMatch extends Event {
+    constructor(name, location, date, player1, player2) {
+        super(name, location, date)
+        this.player1 = player1
+        this.player2 = player2
+    }
+    
+    getDetails() {
+        const eventBasics = super.getDetails()
+        return `${eventBasics} Match: ${this.player1} vs ${this.player2}`
+    }
+    
+}
+
+const tennisMatch = new TennisMatch("Grand Slam Final", "Wimbledon", "2025-08-11", "J Sinner", "C Alcaraz")
+console.log(tennisMatch.getDetails())
+    </script>
+    
+</body>
+</html>
